@@ -1,0 +1,18 @@
+Setup your Flask App
+- design for development
+- we will create and activate virtual environment
+- add flask to requirement file
+- pip install dependencies through requirement txt
+- configuration of the App
+- need to setup my app with filename main.py
+- define FLASK_APP environment
+- create function to initialize app
+
+- Thinking to use MVC
+- Model, view, controller, db
+- db √
+- view  <-> schema √
+- controller √
+- model √
+
+- git initialize

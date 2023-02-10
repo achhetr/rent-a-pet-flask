@@ -1,0 +1,29 @@
+Rent A Pet
+
+A rental company for pets
+
+Use case:
+
+- A customer cannot own a pet but wants to enjoy having a pet
+- Customer gets opporunity to pay for a pet in hourly basis
+- Customer can rent there own pet
+
+Model
+
+- User who owns a pet
+- Pet (animal potentially dog and cat)
+- User who will be renting pet
+
+<-> model that tracks transactions (Many to Many relationship)
+
+
+-------- design -----
+Model
+
+User <-> (Single Table Inheritance) STI model or table
+User renting pet <-> username, verified, mobile_number, post_code
+User leasing pet <-> username, verified, mobile_number, post_code
+
+
+Pet <-> 
+type, owner_id (user_id), weight
