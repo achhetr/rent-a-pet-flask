@@ -10,6 +10,15 @@ def get_users():
     users = User.query.all()
     return users_schema.dump(users)
 
+@user.get("/<int:id>")
+def get_user(id):
+    user = User.query.get(id)
+
+    if not user:
+        return { "message": "Don't try to hack me" }
+
+    return user_schema.dump(user)
+
 @user.post("/")
 def create_user():
     try:
