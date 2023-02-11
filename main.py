@@ -15,4 +15,8 @@ def create_app():
     db.init_app(app)
     ma.init_app(app)
 
+    from controller import registerable_controllers
+    for controller in registerable_controllers:
+        app.register_blueprint(controller)
+
     return app
