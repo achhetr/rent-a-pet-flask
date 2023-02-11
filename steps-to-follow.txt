@@ -16,3 +16,7 @@ Setup your Flask App
 - model √
 
 - git initialize
+
+- setup sql alchemy
+- setup marshamallow (req <-> res)
+- setup command line expression (DDL -> DB)
