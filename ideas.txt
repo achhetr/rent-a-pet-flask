@@ -27,3 +27,7 @@ User leasing pet <-> username, verified, mobile_number, post_code
 
 Pet <-> 
 type, owner_id (user_id), weight
+
+Rental
+owner_id, rentee_id, time_duration, amount <-> 2 pets
+pet_id, user_id, time_duration, amount <-> which pet is rented, relationship who is the owner of the pet
