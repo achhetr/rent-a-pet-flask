@@ -10,7 +10,7 @@ class Rental(db.Model):
 
     pet_id = db.Column(db.Integer(), db.ForeignKey("pets.id"), nullable=False)
 
-    user_id = db.Column(db.Integer(), db.ForeignKey("users.id"), nullable=False)
+    rentee_id = db.Column(db.Integer(), db.ForeignKey("users.id"), nullable=False)
 
-    user = db.relationship('User', backref='rentals')
+    rentee = db.relationship('User', backref='rentals')
     pet = db.relationship('Pet', backref='rentals')

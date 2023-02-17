@@ -1,0 +1,11 @@
+Many to Many relationship √
+
+Deploy to PROD
+https://rent-a-pet-service.onrender.com
+https://render.com/
+
+
+Decorator with parameters for functools
+
+How to handle only images
+https://jdhao.github.io/2020/04/12/build_webapi_with_flask_s2/

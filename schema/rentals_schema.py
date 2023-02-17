@@ -2,9 +2,13 @@ from main import ma
 
 class RentalSchema(ma.Schema):
     class Meta:
-        fields = ("id", "pet_id", "user_id", "time_duration_in_seconds", "amount_in_cents", "rentals")
+        fields = ("id", "pet_id", "rentee_id", "time_duration_in_seconds", "amount_in_cents", "rentee", "pet")
 
-    rentals = ma.List(ma.Nested("RentalSchema", exclude=("user",)))
+        load_only = ["rentee_id", "pet_id"]
 
-user_schema = RentalSchema()
-users_schema = RentalSchema(many=True)
+    pet = ma.Nested("PetSchema")
+    rentee = ma.Nested("UserSchema")
+
+
+rental_schema = RentalSchema()
+rentals_schema = RentalSchema(many=True)
