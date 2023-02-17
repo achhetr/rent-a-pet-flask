@@ -7,8 +7,10 @@ class Config(object):
     def SQLALCHEMY_DATABASE_URI(self):
         db_url = os.environ.get("DATABASE_URL")
 
+        print('test', os.environ)
+
         if not db_url:
-            raise ValueError("DATABASE_URL is not set")
+            return "postgresql://postgres:postgres@localhost:5432/postgres"
 
         return db_url
 
@@ -19,7 +21,6 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     pass
-
 
 app_environment = os.environ.get("FLASK_DEBUG")
 
